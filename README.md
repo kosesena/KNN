@@ -14,8 +14,9 @@
 
 [![Course](https://img.shields.io/badge/Ders-Veri%20Madenciliği%20Laboratuvarı-8A2BE2?style=for-the-badge&logo=academia&logoColor=white)]()
 
-> **K-En Yakın Komşu (KNN)** algoritmasının üç farklı gerçek dünya veri seti üzerinde,
-> tutarlı bir metodoloji ile uygulanması ve karşılaştırılması.
+> 🇹🇷 **K-En Yakın Komşu (KNN)** algoritmasının üç farklı gerçek dünya veri seti üzerinde, tutarlı bir metodoloji ile uygulanması ve karşılaştırılması.
+>
+> 🇬🇧 Implementation and comparison of the **K-Nearest Neighbors (KNN)** algorithm across three different real-world datasets using a consistent methodology.
 
 <br/>
 
@@ -23,76 +24,113 @@
 
 ---
 
-## Bu Proje Ne Öğretiyor?
+## Bu Proje Ne Öğretiyor? / What Does This Project Teach?
 
-Bu proje, makine öğrenmesine yeni başlayanlar için **teoriden pratiğe eksiksiz bir KNN rehberi** olmayı hedefler.
+🇹🇷 Bu proje, makine öğrenmesine yeni başlayanlar için **teoriden pratiğe eksiksiz bir KNN rehberi** olmayı hedefler.
+
+🇬🇧 This project aims to be a **complete, hands-on KNN guide** for beginners in machine learning — from theory to practice.
 
 <details>
-<summary><b>Kavramsal Öğrenme Hedefleri</b></summary>
+<summary><b>Kavramsal Öğrenme Hedefleri / Conceptual Learning Goals</b></summary>
 
 <br/>
 
-**1. KNN Algoritmasını Anlamak**
+**1. KNN Algoritmasını Anlamak / Understanding the KNN Algorithm**
+
+🇹🇷
 - "En yakın komşu" mantığının geometrik sezgisi nedir?
 - k sayısı küçük olunca ne olur, büyük olunca ne olur?
 - Neden veri normalizasyonu KNN için kritiktir?
 
-**2. Veri Ön İşleme**
+🇬🇧
+- What is the geometric intuition behind "nearest neighbor" logic?
+- What happens when k is too small or too large?
+- Why is data normalization critical for KNN?
+
+**2. Veri Ön İşleme / Data Preprocessing**
+
+🇹🇷
 - Ham veriyi modele hazır hale getirme adımları nelerdir?
 - Min-Max normalizasyonu neden Öklid mesafesini etkiler?
 - Stratified split neden rastgele split'ten daha güvenilirdir?
 
-**3. Hiperparametre Optimizasyonu**
+🇬🇧
+- What are the steps to prepare raw data for a model?
+- Why does Min-Max normalization affect Euclidean distance?
+- Why is stratified split more reliable than random split?
+
+**3. Hiperparametre Optimizasyonu / Hyperparameter Optimization**
+
+🇹🇷
 - k değerini tahmin etmek yerine veriye dayalı nasıl seçeriz?
 - Cross-validation neden tek bir test setinden daha güvenilirdir?
 - Overfitting / Underfitting grafikte nasıl görünür?
 
-**4. Model Değerlendirme**
+🇬🇧
+- How do we select k based on data rather than guessing?
+- Why is cross-validation more reliable than a single test set?
+- How does overfitting / underfitting appear on a graph?
+
+**4. Model Değerlendirme / Model Evaluation**
+
+🇹🇷
 - Accuracy tek başına yeterli midir?
 - Precision, Recall ve F1-Score ne zaman önemlidir?
 - Confusion matrix'ten hangi hatalar okunabilir?
 
-**5. Boyut İndirgeme (PCA)**
+🇬🇧
+- Is accuracy alone sufficient?
+- When do Precision, Recall, and F1-Score matter?
+- What errors can be read from a confusion matrix?
+
+**5. Boyut İndirgeme / Dimensionality Reduction (PCA)**
+
+🇹🇷
 - 13 veya 64 boyutlu veriyi gözle nasıl görürüz?
 - PCA varyansın ne kadarını korur?
 
+🇬🇧
+- How do we visualize 13 or 64-dimensional data?
+- How much variance does PCA preserve?
+
 </details>
 
 <details>
-<summary><b>Pratik Beceri Hedefleri</b></summary>
+<summary><b>Pratik Beceri Hedefleri / Practical Skill Goals</b></summary>
 
 <br/>
 
-| Beceri | Nerede Uygulanıyor |
+| Beceri / Skill | Nerede / Where |
 |---|---|
-| `pandas` ile veri okuma ve keşif | Tüm notebook'lar |
-| `matplotlib` & `seaborn` ile görselleştirme | Tüm notebook'lar |
-| `MinMaxScaler` ile normalizasyon | Tüm notebook'lar |
-| `train_test_split` ile stratified bölme | Tüm notebook'lar |
-| `cross_val_score` ile k arama | Tüm notebook'lar |
-| `KNeighborsClassifier` ile model kurma | Tüm notebook'lar |
-| `confusion_matrix` & `classification_report` | Tüm notebook'lar |
-| `PCA` ile boyut indirgeme ve görselleştirme | Wine & Digits |
-| Görüntü verisi ile çalışma | Digits |
+| `pandas` — veri okuma ve keşif / data loading & exploration | All notebooks |
+| `matplotlib` & `seaborn` — görselleştirme / visualization | All notebooks |
+| `MinMaxScaler` — normalizasyon / normalization | All notebooks |
+| `train_test_split` — stratified bölme / stratified splitting | All notebooks |
+| `cross_val_score` — en iyi k / best k selection | All notebooks |
+| `KNeighborsClassifier` — model kurma / model building | All notebooks |
+| `confusion_matrix` & `classification_report` — değerlendirme / evaluation | All notebooks |
+| `PCA` — boyut indirgeme / dimensionality reduction | Wine & Digits |
+| Görüntü verisi / Image data handling | Digits |
 
 </details>
 
 <details>
-<summary><b>Üç Farklı Veri Setiyle Ne Öğrenilir?</b></summary>
+<summary><b>Üç Farklı Veri Setiyle Ne Öğrenilir? / What Do Three Datasets Teach?</b></summary>
 
 <br/>
 
-Aynı algoritmanın farklı problem türlerine uygulanması şu soruları cevaplar:
+🇹🇷 Aynı algoritmanın farklı problem türlerine uygulanması şu soruları cevaplar:
 
-- Az özellikle mi, çok özellikle mi daha iyi çalışır?
-- Görüntü verisi sayısal veriyle aynı pipeline'a girer mi?
-- Sınıf sayısı arttıkça doğruluk nasıl değişir?
-- Hangisi daha zor: 3 sınıf mı, 10 sınıf mı?
+🇬🇧 Applying the same algorithm to different problem types answers:
+
+- 🇹🇷 Az özellikle mi, çok özellikle mi daha iyi çalışır? / 🇬🇧 Does it work better with few or many features?
+- 🇹🇷 Görüntü verisi sayısal veriyle aynı pipeline'a girer mi? / 🇬🇧 Can image data use the same pipeline as numerical data?
+- 🇹🇷 Sınıf sayısı arttıkça doğruluk nasıl değişir? / 🇬🇧 How does accuracy change as the number of classes increases?
 
 ```
-Iris   →  Az özellik, dengeli sınıf, basit problem
-Wine   →  Orta özellik, kimyasal veri, korelasyon analizi
-Digits →  Çok özellik, görüntü verisi, gerçek dünya senaryosu
+Iris   →  Few features,    balanced classes,  simple problem
+Wine   →  Medium features, chemical data,     correlation analysis
+Digits →  Many features,   image data,        real-world scenario
 ```
 
 </details>
@@ -101,39 +139,41 @@ Digits →  Çok özellik, görüntü verisi, gerçek dünya senaryosu
 
 ---
 
-## KNN Nedir?
+## KNN Nedir? / What is KNN?
 
 <div align="center">
 
-| 🇬🇧 İngilizce | 🇹🇷 Türkçe |
+| 🇬🇧 English | 🇹🇷 Türkçe |
 |:---:|:---:|
 | **K-Nearest Neighbors** | **K-En Yakın Komşu** |
 
 </div>
 
-**KNN (K-Nearest Neighbors / K-En Yakın Komşu)**, yeni bir veri noktasını sınıflandırmak için eğitim setindeki en yakın `k` komşusuna bakan, basit ama güçlü bir makine öğrenmesi algoritmasıdır.
+🇹🇷 **KNN**, yeni bir veri noktasını sınıflandırmak için eğitim setindeki en yakın `k` komşusuna bakan, basit ama güçlü bir makine öğrenmesi algoritmasıdır.
 
-> **K** → Kaç komşuya bakılacağını belirleyen hiperparametre
-> **Nearest** → En yakın (Öklid mesafesiyle ölçülür)
-> **Neighbors** → Komşular (eğitim setindeki veri noktaları)
+🇬🇧 **KNN** is a simple yet powerful machine learning algorithm that classifies a new data point by looking at its `k` nearest neighbors in the training set.
+
+> **K** → 🇹🇷 Kaç komşuya bakılacağını belirleyen hiperparametre / 🇬🇧 Hyperparameter defining how many neighbors to consider
+> **Nearest** → 🇹🇷 En yakın — Öklid mesafesiyle ölçülür / 🇬🇧 Closest — measured by Euclidean distance
+> **Neighbors** → 🇹🇷 Komşular — eğitim setindeki veri noktaları / 🇬🇧 Data points in the training set
 
 ```
-Yeni nokta → En yakın k komşuya bak → Çoğunluk oyuyla sınıf belirle ✓
+New point → Find k nearest neighbors → Majority vote → Assign class ✓
 ```
 
-KNN'in avantajları:
-- Eğitim aşaması yoktur (lazy learner)
-- Sezgisel ve anlaşılması kolaydır
-- Yeni veriler eklendiğinde model yeniden eğitilmez
-- Doğru normalizasyonla çok güçlü sonuçlar verir
+🇹🇷 KNN'in avantajları / 🇬🇧 Advantages of KNN:
+- 🇹🇷 Eğitim aşaması yoktur (lazy learner) / 🇬🇧 No training phase (lazy learner)
+- 🇹🇷 Sezgisel ve anlaşılması kolaydır / 🇬🇧 Intuitive and easy to understand
+- 🇹🇷 Yeni veriler eklendiğinde model yeniden eğitilmez / 🇬🇧 No retraining needed when new data is added
+- 🇹🇷 Doğru normalizasyonla çok güçlü sonuçlar verir / 🇬🇧 Delivers strong results with proper normalization
 
 ---
 
-## Veri Setleri
+## Veri Setleri / Datasets
 
 <div align="center">
 
-| | Veri Seti | Notebook | Örnekler | Özellikler | Sınıflar |
+| | Dataset | Notebook | Samples | Features | Classes |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | 🌸 | **Iris** | `KNN_Iris.ipynb` | 150 | 4 | 3 |
 | 🍷 | **Wine** | `KNN_Wine.ipynb` | 178 | 13 | 3 |
@@ -144,35 +184,37 @@ KNN'in avantajları:
 ---
 
 <details>
-<summary><h2>🌸 Dataset 1 — Iris (Çiçek Türü Sınıflandırması)</h2></summary>
+<summary><h2>🌸 Dataset 1 — Iris (Flower Species Classification)</h2></summary>
 
 <br/>
 
-Botanikçi Edgar Anderson tarafından derlenen bu klasik veri seti, makine öğrenmesinin "Merhaba Dünya"sı olarak kabul edilir. Üç farklı Iris çiçeği türünü fiziksel ölçümlerle ayırt etmeyi amaçlar.
+🇹🇷 Botanikçi Edgar Anderson tarafından derlenen bu klasik veri seti, makine öğrenmesinin "Merhaba Dünya"sı olarak kabul edilir. Üç farklı Iris çiçeği türünü fiziksel ölçümlerle ayırt etmeyi amaçlar.
 
-### Sınıflar
+🇬🇧 This classic dataset, compiled by botanist Edgar Anderson, is considered the "Hello World" of machine learning. It aims to distinguish three Iris flower species using physical measurements.
 
-| Sınıf | Türkçe | Örnek Sayısı |
-|---|---|---|
-| *Iris Setosa* | Setosa | 50 |
-| *Iris Versicolor* | Versicolor | 50 |
-| *Iris Virginica* | Virginica | 50 |
+### Classes
 
-### Özellikler
+| Class | Samples |
+|---|---|
+| *Iris Setosa* | 50 |
+| *Iris Versicolor* | 50 |
+| *Iris Virginica* | 50 |
+
+### Features
 
 ```
-sepal length (cm)  →  Çanak yaprağı uzunluğu
-sepal width  (cm)  →  Çanak yaprağı genişliği
-petal length (cm)  →  Taç yaprağı uzunluğu
-petal width  (cm)  →  Taç yaprağı genişliği
+sepal length (cm)  →  Çanak yaprağı uzunluğu  /  Sepal length
+sepal width  (cm)  →  Çanak yaprağı genişliği /  Sepal width
+petal length (cm)  →  Taç yaprağı uzunluğu    /  Petal length
+petal width  (cm)  →  Taç yaprağı genişliği   /  Petal width
 ```
 
-### Notebook İçeriği
+### Notebook Contents
 
-- Özelliklerin türlere göre histogram dağılımı
-- Korelasyon ısı haritası
-- 5-fold cross-validation ile en iyi k değerinin bulunması
-- Eğitim / Test / CV doğruluk karşılaştırması
+- Feature distribution histograms by species
+- Correlation heatmap
+- Best k selection via 5-fold cross-validation
+- Train / Test / CV accuracy comparison
 - Confusion matrix & classification report
 
 </details>
@@ -180,143 +222,150 @@ petal width  (cm)  →  Taç yaprağı genişliği
 ---
 
 <details>
-<summary><h2>🍷 Dataset 2 — Wine (Şarap Üreticisi Sınıflandırması)</h2></summary>
+<summary><h2>🍷 Dataset 2 — Wine (Producer Classification)</h2></summary>
 
 <br/>
 
-İtalya'daki üç farklı üreticiden alınan şarapların kimyasal analizine dayanan veri seti. 13 farklı kimyasal özellik kullanılarak şarabın hangi üreticiden geldiği tahmin edilmektedir.
+🇹🇷 İtalya'daki üç farklı üreticiden alınan şarapların kimyasal analizine dayanan veri seti. 13 farklı kimyasal özellik kullanılarak şarabın hangi üreticiden geldiği tahmin edilmektedir.
 
-### Sınıflar
+🇬🇧 A dataset based on chemical analysis of wines from three different Italian producers. 13 chemical features are used to predict which producer the wine comes from.
 
-| Sınıf | Açıklama | Örnek Sayısı |
-|---|---|---|
-| Üretici 1 | Birinci bölge şarapları | 59 |
-| Üretici 2 | İkinci bölge şarapları | 71 |
-| Üretici 3 | Üçüncü bölge şarapları | 48 |
+### Classes
 
-### Özellikler (13 Adet)
+| Class | Samples |
+|---|---|
+| Producer 1 | 59 |
+| Producer 2 | 71 |
+| Producer 3 | 48 |
+
+### Features (13)
 
 ```
-alcohol          →  Alkol oranı
-malic_acid       →  Malik asit
-ash              →  Kül miktarı
-alcalinity       →  Külün alkaliliği
-magnesium        →  Magnezyum
-total_phenols    →  Toplam fenoller
-flavanoids       →  Flavonoidler
-nonflavanoid_p.  →  Flavonoid olmayan fenoller
-proanthocyanins  →  Proantosiyanidinler
-color_intensity  →  Renk yoğunluğu
-hue              →  Renk tonu
-od280/od315      →  OD280/OD315 şarap sulandırması
-proline          →  Prolin miktarı
+alcohol          →  Alkol oranı         /  Alcohol content
+malic_acid       →  Malik asit          /  Malic acid
+ash              →  Kül miktarı         /  Ash content
+alcalinity       →  Külün alkaliliği    /  Alcalinity of ash
+magnesium        →  Magnezyum           /  Magnesium
+total_phenols    →  Toplam fenoller     /  Total phenols
+flavanoids       →  Flavonoidler        /  Flavanoids
+nonflavanoid_p.  →  Fl. olmayan fen.    /  Nonflavanoid phenols
+proanthocyanins  →  Proantosiyanidinler /  Proanthocyanins
+color_intensity  →  Renk yoğunluğu     /  Color intensity
+hue              →  Renk tonu           /  Hue
+od280/od315      →  OD280/OD315         /  OD280/OD315 of wines
+proline          →  Prolin miktarı      /  Proline
 ```
 
-### Notebook İçeriği
+### Notebook Contents
 
-- Temel özelliklerin kutu grafikleri (boxplot)
-- 13×13 korelasyon matrisi
-- 5-fold cross-validation ile en iyi k değerinin bulunması
-- Eğitim / Test / CV doğruluk karşılaştırması
+- Boxplots of key features by producer
+- 13×13 correlation matrix
+- Best k selection via 5-fold cross-validation
+- Train / Test / CV accuracy comparison
 - Confusion matrix & classification report
-- **PCA ile 2D görselleştirme** (13 özelliği 2 boyuta indirgeme)
+- **PCA 2D visualization** (13 features → 2 dimensions)
 
 </details>
 
 ---
 
 <details>
-<summary><h2>✍️ Dataset 3 — Digits (El Yazısı Rakam Tanıma)</h2></summary>
+<summary><h2>✍️ Dataset 3 — Digits (Handwritten Digit Recognition)</h2></summary>
 
 <br/>
 
-Scikit-learn'ün kendi bünyesinde barındırdığı bu veri seti, el yazısıyla yazılmış 0-9 arası rakamların 8×8 piksel gri tonlamalı görüntülerinden oluşur. Gerçek dünya görüntü tanıma probleminin basitleştirilmiş bir versiyonudur.
+🇹🇷 Scikit-learn'ün kendi bünyesinde barındırdığı bu veri seti, el yazısıyla yazılmış 0-9 arası rakamların 8×8 piksel gri tonlamalı görüntülerinden oluşur. Gerçek dünya görüntü tanıma probleminin basitleştirilmiş bir versiyonudur.
 
-### Sınıflar
+🇬🇧 Built into scikit-learn, this dataset consists of 8×8 pixel grayscale images of handwritten digits 0–9. It is a simplified version of a real-world image recognition problem.
 
-10 sınıf — 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 rakamları (her biri ~180 örnek)
+### Classes
 
-### Veri Yapısı
+10 classes — digits 0 through 9 (~180 samples each)
+
+### Data Structure
 
 ```
-Her görüntü  →  8 × 8 piksel  =  64 özellik
-Piksel değeri →  0 (beyaz) ... 16 (siyah)
-Toplam örnek  →  1797 görüntü
+Each image   →  8 × 8 pixels  =  64 features
+Pixel value  →  0 (white) ... 16 (black)
+Total samples →  1797 images
 ```
 
-### Notebook İçeriği
+### Notebook Contents
 
-- Her rakamdan örnek görüntülerin gösterimi
-- Ortalama piksel yoğunluğu haritaları (her rakam için)
-- Sınıf dağılım grafiği
-- 5-fold cross-validation ile en iyi k değerinin bulunması
-- Eğitim / Test / CV doğruluk karşılaştırması
+- Sample images for each digit
+- Average pixel intensity maps per digit
+- Class distribution chart
+- Best k selection via 5-fold cross-validation
+- Train / Test / CV accuracy comparison
 - 10×10 Confusion matrix & classification report
-- **PCA ile 2D görselleştirme** (64 özelliği 2 boyuta indirgeme)
-- **Yanlış tahmin edilen örneklerin görselleştirilmesi**
+- **PCA 2D visualization** (64 features → 2 dimensions)
+- **Visualization of misclassified samples**
 
 </details>
 
 ---
 
-## Ortak Metodoloji
+## Ortak Metodoloji / Shared Methodology
 
-Her notebook'ta aynı sistematik pipeline uygulanmaktadır:
+🇹🇷 Her notebook'ta aynı sistematik pipeline uygulanmaktadır.
+🇬🇧 The same systematic pipeline is applied across all notebooks.
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    KNN PIPELINE                         │
-├─────────────────────────────────────────────────────────┤
-│  1. Veri Yükleme & Keşif                                │
-│     └─ boyut, sınıf dağılımı, temel istatistikler       │
-│                                                         │
-│  2. Görselleştirme (EDA)                                │
-│     └─ veri setine özgü grafikler                       │
-│                                                         │
-│  3. Normalizasyon                                       │
-│     └─ Min-Max Scaler → tüm değerleri [0, 1]'e taşı    │
-│                                                         │
-│  4. Train / Test Split                                  │
-│     └─ %70 eğitim / %30 test, stratified               │
-│                                                         │
-│  5. Hiperparametre Optimizasyonu                        │
-│     └─ k = 1..20 arası 5-fold cross-validation         │
-│                                                         │
-│  6. Model Eğitimi & Tahmin                              │
-│     └─ KNeighborsClassifier(n_neighbors=best_k)        │
-│                                                         │
-│  7. Değerlendirme                                       │
-│     └─ Accuracy · Precision · Recall · F1 · CM         │
-└─────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                         KNN PIPELINE                            │
+├─────────────────────────────────────────────────────────────────┤
+│  1. Data Loading & Exploration  /  Veri Yükleme & Keşif         │
+│     └─ shape, class distribution, descriptive statistics        │
+│                                                                 │
+│  2. Visualization (EDA)  /  Görselleştirme                      │
+│     └─ dataset-specific plots                                   │
+│                                                                 │
+│  3. Normalization  /  Normalizasyon                             │
+│     └─ Min-Max Scaler → all values to [0, 1]                   │
+│                                                                 │
+│  4. Train / Test Split                                          │
+│     └─ 70% train / 30% test, stratified                        │
+│                                                                 │
+│  5. Hyperparameter Optimization  /  Hiperparametre Optimizasyonu│
+│     └─ k = 1..20 via 5-fold cross-validation                   │
+│                                                                 │
+│  6. Model Training & Prediction  /  Eğitim & Tahmin            │
+│     └─ KNeighborsClassifier(n_neighbors=best_k)                │
+│                                                                 │
+│  7. Evaluation  /  Değerlendirme                                │
+│     └─ Accuracy · Precision · Recall · F1 · Confusion Matrix   │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Kurulum & Kullanım
+## Kurulum & Kullanım / Setup & Usage
 
-### Gereksinimler
+### Gereksinimler / Requirements
 
 ```bash
 pip install numpy pandas matplotlib seaborn scikit-learn notebook
 ```
 
-### Çalıştırma
+### Çalıştırma / Run
 
 ```bash
-# Tüm notebookları listele
+# List all notebooks
 jupyter notebook
 
-# Veya doğrudan aç
+# Or open directly
 jupyter notebook KNN_Iris.ipynb
 jupyter notebook KNN_Wine.ipynb
 jupyter notebook KNN_Digits.ipynb
 ```
 
-Her notebook bağımsız çalışır — harici veri dosyası gerekmez, veri setleri scikit-learn üzerinden otomatik yüklenir.
+🇹🇷 Her notebook bağımsız çalışır — harici veri dosyası gerekmez, veri setleri scikit-learn üzerinden otomatik yüklenir.
+
+🇬🇧 Each notebook runs independently — no external data files needed, datasets are loaded automatically via scikit-learn.
 
 ---
 
-## Kullanılan Teknolojiler
+## Kullanılan Teknolojiler / Tech Stack
 
 <div align="center">
 
