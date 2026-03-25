@@ -12,8 +12,12 @@
 
 <br/>
 
+[![Course](https://img.shields.io/badge/Ders-Veri%20Madenciliği%20Laboratuvarı-8A2BE2?style=for-the-badge&logo=academia&logoColor=white)]()
+
 > **K-En Yakın Komşu (KNN)** algoritmasının üç farklı gerçek dünya veri seti üzerinde,
 > tutarlı bir metodoloji ile uygulanması ve karşılaştırılması.
+>
+> 📚 Bu çalışma **Veri Madenciliği Laboratuvarı** dersi kapsamında hazırlanmıştır.
 
 <br/>
 
