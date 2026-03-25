@@ -1,98 +1,247 @@
-# KNN Sınıflandırması
+<div align="center">
 
-K-En Yakın Komşu (KNN) algoritmasının üç farklı veri seti üzerinde uygulanması. Her notebook bağımsız çalışır ve farklı bir problem türünü ele alır.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=KNN%20Classification&fontSize=50&fontColor=fff&animation=twinkling&fontAlignY=35&desc=K-En%20Yakın%20Komşu%20%7C%203%20Farklı%20Veri%20Seti&descAlignY=55&descSize=18"/>
 
----
+<br/>
 
-## Veri Setleri
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.x-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 
-### 1. Iris — Çiçek Türü Sınıflandırması
-**Notebook:** `KNN_Iris.ipynb`
+<br/>
 
-| Özellik | Detay |
-|---|---|
-| Örnek Sayısı | 150 |
-| Özellik Sayısı | 4 |
-| Sınıf Sayısı | 3 (Setosa, Versicolor, Virginica) |
-| Problem Türü | Çok sınıflı sınıflandırma |
-| Özellikler | Sepal uzunluğu/genişliği, petal uzunluğu/genişliği (cm) |
+> **K-En Yakın Komşu (KNN)** algoritmasının üç farklı gerçek dünya veri seti üzerinde,
+> tutarlı bir metodoloji ile uygulanması ve karşılaştırılması.
 
-**İçerik:**
-- Özelliklerin türlere göre histogram dağılımı
-- Korelasyon ısı haritası
-- 5-fold cross-validation ile en iyi k seçimi
-- Confusion matrix ve classification report
+<br/>
+
+</div>
 
 ---
 
-### 2. Wine — Şarap Üreticisi Sınıflandırması
-**Notebook:** `KNN_Wine.ipynb`
+## 📖 KNN Nedir?
 
-| Özellik | Detay |
-|---|---|
-| Örnek Sayısı | 178 |
-| Özellik Sayısı | 13 |
-| Sınıf Sayısı | 3 (Üretici 1, 2, 3) |
-| Problem Türü | Çok sınıflı sınıflandırma |
-| Özellikler | Alkol, malik asit, kül, flavonoidler, renk yoğunluğu vb. |
+**K-En Yakın Komşu (KNN)**, yeni bir veri noktasını sınıflandırmak için eğitim setindeki en yakın `k` komşusuna bakan, basit ama güçlü bir makine öğrenmesi algoritmasıdır.
 
-**İçerik:**
-- Temel özelliklerin kutu grafikleri (boxplot)
-- 13 özellik arası korelasyon matrisi
-- 5-fold cross-validation ile en iyi k seçimi
-- Confusion matrix, classification report
-- **PCA ile 2D görselleştirme**
+```
+Yeni nokta → En yakın k komşuya bak → Çoğunluk oyuyla sınıf belirle ✓
+```
+
+KNN'in avantajları:
+- Eğitim aşaması yoktur (lazy learner)
+- Sezgisel ve anlaşılması kolaydır
+- Yeni veriler eklendiğinde model yeniden eğitilmez
+- Doğru normalizasyonla çok güçlü sonuçlar verir
 
 ---
 
-### 3. Digits — El Yazısı Rakam Tanıma
-**Notebook:** `KNN_Digits.ipynb`
+## 📂 Veri Setleri
 
-| Özellik | Detay |
-|---|---|
-| Örnek Sayısı | 1797 |
-| Özellik Sayısı | 64 (8×8 piksel) |
-| Sınıf Sayısı | 10 (0–9 arası rakamlar) |
-| Problem Türü | Görüntü sınıflandırma |
-| Özellikler | Gri tonlamalı piksel yoğunlukları |
+<div align="center">
 
-**İçerik:**
-- Her rakamdan örnek görüntüler (8×8 piksel)
-- Ortalama piksel yoğunluğu haritaları
-- Sınıf dağılım grafiği
-- 5-fold cross-validation ile en iyi k seçimi
-- Confusion matrix (10×10)
-- **PCA ile 2D görselleştirme**
-- **Yanlış tahmin edilen örneklerin görselleştirilmesi**
+| | Veri Seti | Notebook | Örnekler | Özellikler | Sınıflar |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 🌸 | **Iris** | `KNN_Iris.ipynb` | 150 | 4 | 3 |
+| 🍷 | **Wine** | `KNN_Wine.ipynb` | 178 | 13 | 3 |
+| ✍️ | **Digits** | `KNN_Digits.ipynb` | 1797 | 64 | 10 |
+
+</div>
 
 ---
 
-## Ortak Metodoloji
+<details>
+<summary><h2>🌸 Dataset 1 — Iris (Çiçek Türü Sınıflandırması)</h2></summary>
 
-Üç notebook'ta da aynı sistematik yaklaşım uygulanmaktadır:
+<br/>
 
-1. **Veri Yükleme & Keşif** — boyut, sınıf dağılımı, temel istatistikler
-2. **Görselleştirme** — veri setine özgü EDA grafikleri
-3. **Normalizasyon** — Min-Max Scaler ile [0,1] aralığına ölçekleme
-4. **Train-Test Split** — %70 eğitim / %30 test, stratified örnekleme
-5. **Hiperparametre Optimizasyonu** — k=1..20 için 5-fold cross-validation
-6. **Değerlendirme** — Accuracy, Precision, Recall, F1-Score, Confusion Matrix
+Botanikçi Edgar Anderson tarafından derlenen bu klasik veri seti, makine öğrenmesinin "Merhaba Dünya"sı olarak kabul edilir. Üç farklı Iris çiçeği türünü fiziksel ölçümlerle ayırt etmeyi amaçlar.
+
+### Sınıflar
+
+| Sınıf | Türkçe | Örnek Sayısı |
+|---|---|---|
+| *Iris Setosa* | Setosa | 50 |
+| *Iris Versicolor* | Versicolor | 50 |
+| *Iris Virginica* | Virginica | 50 |
+
+### Özellikler
+
+```
+sepal length (cm)  →  Çanak yaprağı uzunluğu
+sepal width  (cm)  →  Çanak yaprağı genişliği
+petal length (cm)  →  Taç yaprağı uzunluğu
+petal width  (cm)  →  Taç yaprağı genişliği
+```
+
+### Notebook İçeriği
+
+- 📊 Özelliklerin türlere göre histogram dağılımı
+- 🔥 Korelasyon ısı haritası
+- 🔢 5-fold cross-validation ile en iyi k değerinin bulunması
+- 📉 Eğitim / Test / CV doğruluk karşılaştırması
+- 📋 Confusion matrix & classification report
+
+</details>
 
 ---
 
-## Kurulum
+<details>
+<summary><h2>🍷 Dataset 2 — Wine (Şarap Üreticisi Sınıflandırması)</h2></summary>
+
+<br/>
+
+İtalya'daki üç farklı üreticiden alınan şarapların kimyasal analizine dayanan veri seti. 13 farklı kimyasal özellik kullanılarak şarabın hangi üreticiden geldiği tahmin edilmektedir.
+
+### Sınıflar
+
+| Sınıf | Açıklama | Örnek Sayısı |
+|---|---|---|
+| Üretici 1 | Birinci bölge şarapları | 59 |
+| Üretici 2 | İkinci bölge şarapları | 71 |
+| Üretici 3 | Üçüncü bölge şarapları | 48 |
+
+### Özellikler (13 Adet)
+
+```
+alcohol          →  Alkol oranı
+malic_acid       →  Malik asit
+ash              →  Kül miktarı
+alcalinity       →  Külün alkaliliği
+magnesium        →  Magnezyum
+total_phenols    →  Toplam fenoller
+flavanoids       →  Flavonoidler
+nonflavanoid_p.  →  Flavonoid olmayan fenoller
+proanthocyanins  →  Proantosiyanidinler
+color_intensity  →  Renk yoğunluğu
+hue              →  Renk tonu
+od280/od315      →  OD280/OD315 şarap sulandırması
+proline          →  Prolin miktarı
+```
+
+### Notebook İçeriği
+
+- 📦 Temel özelliklerin kutu grafikleri (boxplot)
+- 🔥 13×13 korelasyon matrisi
+- 🔢 5-fold cross-validation ile en iyi k değerinin bulunması
+- 📉 Eğitim / Test / CV doğruluk karşılaştırması
+- 📋 Confusion matrix & classification report
+- 🎯 **PCA ile 2D görselleştirme** (13 özelliği 2 boyuta indirgeme)
+
+</details>
+
+---
+
+<details>
+<summary><h2>✍️ Dataset 3 — Digits (El Yazısı Rakam Tanıma)</h2></summary>
+
+<br/>
+
+Scikit-learn'ün kendi bünyesinde barındırdığı bu veri seti, el yazısıyla yazılmış 0-9 arası rakamların 8×8 piksel gri tonlamalı görüntülerinden oluşur. Gerçek dünya görüntü tanıma probleminin basitleştirilmiş bir versiyonudur.
+
+### Sınıflar
+
+10 sınıf — 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 rakamları (her biri ~180 örnek)
+
+### Veri Yapısı
+
+```
+Her görüntü  →  8 × 8 piksel  =  64 özellik
+Piksel değeri →  0 (beyaz) ... 16 (siyah)
+Toplam örnek  →  1797 görüntü
+```
+
+### Notebook İçeriği
+
+- 🖼️ Her rakamdan örnek görüntülerin gösterimi
+- 🌡️ Ortalama piksel yoğunluğu haritaları (her rakam için)
+- 📊 Sınıf dağılım grafiği
+- 🔢 5-fold cross-validation ile en iyi k değerinin bulunması
+- 📉 Eğitim / Test / CV doğruluk karşılaştırması
+- 📋 10×10 Confusion matrix & classification report
+- 🎯 **PCA ile 2D görselleştirme** (64 özelliği 2 boyuta indirgeme)
+- ❌ **Yanlış tahmin edilen örneklerin görselleştirilmesi**
+
+</details>
+
+---
+
+## ⚙️ Ortak Metodoloji
+
+Her notebook'ta aynı sistematik pipeline uygulanmaktadır:
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    KNN PIPELINE                         │
+├─────────────────────────────────────────────────────────┤
+│  1. Veri Yükleme & Keşif                                │
+│     └─ boyut, sınıf dağılımı, temel istatistikler       │
+│                                                         │
+│  2. Görselleştirme (EDA)                                │
+│     └─ veri setine özgü grafikler                       │
+│                                                         │
+│  3. Normalizasyon                                       │
+│     └─ Min-Max Scaler → tüm değerleri [0, 1]'e taşı    │
+│                                                         │
+│  4. Train / Test Split                                  │
+│     └─ %70 eğitim / %30 test, stratified               │
+│                                                         │
+│  5. Hiperparametre Optimizasyonu                        │
+│     └─ k = 1..20 arası 5-fold cross-validation         │
+│                                                         │
+│  6. Model Eğitimi & Tahmin                              │
+│     └─ KNeighborsClassifier(n_neighbors=best_k)        │
+│                                                         │
+│  7. Değerlendirme                                       │
+│     └─ Accuracy · Precision · Recall · F1 · CM         │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🚀 Kurulum & Kullanım
+
+### Gereksinimler
 
 ```bash
 pip install numpy pandas matplotlib seaborn scikit-learn notebook
-jupyter notebook
 ```
 
-## Kullanım
-
-Her notebook bağımsız çalışır, herhangi birini açıp tüm hücreleri çalıştırabilirsin.
+### Çalıştırma
 
 ```bash
+# Tüm notebookları listele
+jupyter notebook
+
+# Veya doğrudan aç
 jupyter notebook KNN_Iris.ipynb
 jupyter notebook KNN_Wine.ipynb
 jupyter notebook KNN_Digits.ipynb
 ```
+
+Her notebook bağımsız çalışır — harici veri dosyası gerekmez, veri setleri scikit-learn üzerinden otomatik yüklenir.
+
+---
+
+## 🛠️ Kullanılan Teknolojiler
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-FFD43B?style=flat-square&logo=python&logoColor=blue)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2C2D72?style=flat-square&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat-square&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square&logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
+
+</div>
