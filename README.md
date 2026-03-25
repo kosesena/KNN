@@ -21,6 +21,84 @@
 
 ---
 
+## 🎯 Bu Proje Ne Öğretiyor?
+
+Bu proje, makine öğrenmesine yeni başlayanlar için **teoriden pratiğe eksiksiz bir KNN rehberi** olmayı hedefler.
+
+<details>
+<summary><b>🧠 Kavramsal Öğrenme Hedefleri</b></summary>
+
+<br/>
+
+**1. KNN Algoritmasını Anlamak**
+- "En yakın komşu" mantığının geometrik sezgisi nedir?
+- k sayısı küçük olunca ne olur, büyük olunca ne olur?
+- Neden veri normalizasyonu KNN için kritiktir?
+
+**2. Veri Ön İşleme**
+- Ham veriyi modele hazır hale getirme adımları nelerdir?
+- Min-Max normalizasyonu neden Öklid mesafesini etkiler?
+- Stratified split neden rastgele split'ten daha güvenilirdir?
+
+**3. Hiperparametre Optimizasyonu**
+- k değerini tahmin etmek yerine veriye dayalı nasıl seçeriz?
+- Cross-validation neden tek bir test setinden daha güvenilirdir?
+- Overfitting / Underfitting grafikte nasıl görünür?
+
+**4. Model Değerlendirme**
+- Accuracy tek başına yeterli midir?
+- Precision, Recall ve F1-Score ne zaman önemlidir?
+- Confusion matrix'ten hangi hatalar okunabilir?
+
+**5. Boyut İndirgeme (PCA)**
+- 13 veya 64 boyutlu veriyi gözle nasıl görürüz?
+- PCA varyansın ne kadarını korur?
+
+</details>
+
+<details>
+<summary><b>🔬 Pratik Beceri Hedefleri</b></summary>
+
+<br/>
+
+| Beceri | Nerede Uygulanıyor |
+|---|---|
+| `pandas` ile veri okuma ve keşif | Tüm notebook'lar |
+| `matplotlib` & `seaborn` ile görselleştirme | Tüm notebook'lar |
+| `MinMaxScaler` ile normalizasyon | Tüm notebook'lar |
+| `train_test_split` ile stratified bölme | Tüm notebook'lar |
+| `cross_val_score` ile k arama | Tüm notebook'lar |
+| `KNeighborsClassifier` ile model kurma | Tüm notebook'lar |
+| `confusion_matrix` & `classification_report` | Tüm notebook'lar |
+| `PCA` ile boyut indirgeme ve görselleştirme | Wine & Digits |
+| Görüntü verisi ile çalışma | Digits |
+
+</details>
+
+<details>
+<summary><b>📊 Üç Farklı Veri Setiyle Ne Öğrenilir?</b></summary>
+
+<br/>
+
+Aynı algoritmanın farklı problem türlerine uygulanması şu soruları cevaplar:
+
+- Az özellikle mi, çok özellikle mi daha iyi çalışır?
+- Görüntü verisi sayısal veriyle aynı pipeline'a girer mi?
+- Sınıf sayısı arttıkça doğruluk nasıl değişir?
+- Hangisi daha zor: 3 sınıf mı, 10 sınıf mı?
+
+```
+Iris   →  Az özellik, dengeli sınıf, basit problem
+Wine   →  Orta özellik, kimyasal veri, korelasyon analizi
+Digits →  Çok özellik, görüntü verisi, gerçek dünya senaryosu
+```
+
+</details>
+
+<br/>
+
+---
+
 ## 📖 KNN Nedir?
 
 **K-En Yakın Komşu (KNN)**, yeni bir veri noktasını sınıflandırmak için eğitim setindeki en yakın `k` komşusuna bakan, basit ama güçlü bir makine öğrenmesi algoritmasıdır.
