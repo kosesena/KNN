@@ -16,8 +16,6 @@
 
 > **K-En Yakın Komşu (KNN)** algoritmasının üç farklı gerçek dünya veri seti üzerinde,
 > tutarlı bir metodoloji ile uygulanması ve karşılaştırılması.
->
-> Bu çalışma **Veri Madenciliği Laboratuvarı** dersi kapsamında hazırlanmıştır.
 
 <br/>
 
