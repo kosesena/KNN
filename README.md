@@ -17,7 +17,7 @@
 > **K-En Yakın Komşu (KNN)** algoritmasının üç farklı gerçek dünya veri seti üzerinde,
 > tutarlı bir metodoloji ile uygulanması ve karşılaştırılması.
 >
-> 📚 Bu çalışma **Veri Madenciliği Laboratuvarı** dersi kapsamında hazırlanmıştır.
+> Bu çalışma **Veri Madenciliği Laboratuvarı** dersi kapsamında hazırlanmıştır.
 
 <br/>
 
@@ -25,12 +25,12 @@
 
 ---
 
-## 🎯 Bu Proje Ne Öğretiyor?
+## Bu Proje Ne Öğretiyor?
 
 Bu proje, makine öğrenmesine yeni başlayanlar için **teoriden pratiğe eksiksiz bir KNN rehberi** olmayı hedefler.
 
 <details>
-<summary><b>🧠 Kavramsal Öğrenme Hedefleri</b></summary>
+<summary><b>Kavramsal Öğrenme Hedefleri</b></summary>
 
 <br/>
 
@@ -61,7 +61,7 @@ Bu proje, makine öğrenmesine yeni başlayanlar için **teoriden pratiğe eksik
 </details>
 
 <details>
-<summary><b>🔬 Pratik Beceri Hedefleri</b></summary>
+<summary><b>Pratik Beceri Hedefleri</b></summary>
 
 <br/>
 
@@ -80,7 +80,7 @@ Bu proje, makine öğrenmesine yeni başlayanlar için **teoriden pratiğe eksik
 </details>
 
 <details>
-<summary><b>📊 Üç Farklı Veri Setiyle Ne Öğrenilir?</b></summary>
+<summary><b>Üç Farklı Veri Setiyle Ne Öğrenilir?</b></summary>
 
 <br/>
 
@@ -103,7 +103,7 @@ Digits →  Çok özellik, görüntü verisi, gerçek dünya senaryosu
 
 ---
 
-## 📖 KNN Nedir?
+## KNN Nedir?
 
 <div align="center">
 
@@ -131,7 +131,7 @@ KNN'in avantajları:
 
 ---
 
-## 📂 Veri Setleri
+## Veri Setleri
 
 <div align="center">
 
@@ -171,11 +171,11 @@ petal width  (cm)  →  Taç yaprağı genişliği
 
 ### Notebook İçeriği
 
-- 📊 Özelliklerin türlere göre histogram dağılımı
-- 🔥 Korelasyon ısı haritası
-- 🔢 5-fold cross-validation ile en iyi k değerinin bulunması
-- 📉 Eğitim / Test / CV doğruluk karşılaştırması
-- 📋 Confusion matrix & classification report
+- Özelliklerin türlere göre histogram dağılımı
+- Korelasyon ısı haritası
+- 5-fold cross-validation ile en iyi k değerinin bulunması
+- Eğitim / Test / CV doğruluk karşılaştırması
+- Confusion matrix & classification report
 
 </details>
 
@@ -216,12 +216,12 @@ proline          →  Prolin miktarı
 
 ### Notebook İçeriği
 
-- 📦 Temel özelliklerin kutu grafikleri (boxplot)
-- 🔥 13×13 korelasyon matrisi
-- 🔢 5-fold cross-validation ile en iyi k değerinin bulunması
-- 📉 Eğitim / Test / CV doğruluk karşılaştırması
-- 📋 Confusion matrix & classification report
-- 🎯 **PCA ile 2D görselleştirme** (13 özelliği 2 boyuta indirgeme)
+- Temel özelliklerin kutu grafikleri (boxplot)
+- 13×13 korelasyon matrisi
+- 5-fold cross-validation ile en iyi k değerinin bulunması
+- Eğitim / Test / CV doğruluk karşılaştırması
+- Confusion matrix & classification report
+- **PCA ile 2D görselleştirme** (13 özelliği 2 boyuta indirgeme)
 
 </details>
 
@@ -248,20 +248,20 @@ Toplam örnek  →  1797 görüntü
 
 ### Notebook İçeriği
 
-- 🖼️ Her rakamdan örnek görüntülerin gösterimi
-- 🌡️ Ortalama piksel yoğunluğu haritaları (her rakam için)
-- 📊 Sınıf dağılım grafiği
-- 🔢 5-fold cross-validation ile en iyi k değerinin bulunması
-- 📉 Eğitim / Test / CV doğruluk karşılaştırması
-- 📋 10×10 Confusion matrix & classification report
-- 🎯 **PCA ile 2D görselleştirme** (64 özelliği 2 boyuta indirgeme)
-- ❌ **Yanlış tahmin edilen örneklerin görselleştirilmesi**
+- Her rakamdan örnek görüntülerin gösterimi
+- Ortalama piksel yoğunluğu haritaları (her rakam için)
+- Sınıf dağılım grafiği
+- 5-fold cross-validation ile en iyi k değerinin bulunması
+- Eğitim / Test / CV doğruluk karşılaştırması
+- 10×10 Confusion matrix & classification report
+- **PCA ile 2D görselleştirme** (64 özelliği 2 boyuta indirgeme)
+- **Yanlış tahmin edilen örneklerin görselleştirilmesi**
 
 </details>
 
 ---
 
-## ⚙️ Ortak Metodoloji
+## Ortak Metodoloji
 
 Her notebook'ta aynı sistematik pipeline uygulanmaktadır:
 
@@ -294,7 +294,7 @@ Her notebook'ta aynı sistematik pipeline uygulanmaktadır:
 
 ---
 
-## 🚀 Kurulum & Kullanım
+## Kurulum & Kullanım
 
 ### Gereksinimler
 
@@ -318,7 +318,7 @@ Her notebook bağımsız çalışır — harici veri dosyası gerekmez, veri set
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
 <div align="center">
 
