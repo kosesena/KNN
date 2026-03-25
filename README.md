@@ -105,7 +105,19 @@ Digits →  Çok özellik, görüntü verisi, gerçek dünya senaryosu
 
 ## 📖 KNN Nedir?
 
-**K-En Yakın Komşu (KNN)**, yeni bir veri noktasını sınıflandırmak için eğitim setindeki en yakın `k` komşusuna bakan, basit ama güçlü bir makine öğrenmesi algoritmasıdır.
+<div align="center">
+
+| 🇬🇧 İngilizce | 🇹🇷 Türkçe |
+|:---:|:---:|
+| **K-Nearest Neighbors** | **K-En Yakın Komşu** |
+
+</div>
+
+**KNN (K-Nearest Neighbors / K-En Yakın Komşu)**, yeni bir veri noktasını sınıflandırmak için eğitim setindeki en yakın `k` komşusuna bakan, basit ama güçlü bir makine öğrenmesi algoritmasıdır.
+
+> **K** → Kaç komşuya bakılacağını belirleyen hiperparametre
+> **Nearest** → En yakın (Öklid mesafesiyle ölçülür)
+> **Neighbors** → Komşular (eğitim setindeki veri noktaları)
 
 ```
 Yeni nokta → En yakın k komşuya bak → Çoğunluk oyuyla sınıf belirle ✓
