@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=KNN%20Classification&fontSize=50&fontColor=fff&animation=twinkling&fontAlignY=35&desc=K-En%20Yakın%20Komşu%20%7C%203%20Farklı%20Veri%20Seti&descAlignY=55&descSize=18"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=KNN%20Classification&fontSize=50&fontColor=fff&animation=twinkling&fontAlignY=32&desc=K-En%20Yakın%20Komşu%20%7C%20K-Nearest%20Neighbors%20%7C%203%20Datasets&descAlignY=52&descSize=16"/>
 
 <br/>
 
