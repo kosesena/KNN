@@ -208,15 +208,15 @@ New point → Find k nearest neighbors → Majority vote → Assign class ✓
 
 🇬🇧 This classic dataset, compiled by botanist Edgar Anderson, is considered the "Hello World" of machine learning. It aims to distinguish three Iris flower species using physical measurements.
 
-### Classes
+### Sınıflar / Classes
 
-| Class | Samples |
+| 🇹🇷 Sınıf / 🇬🇧 Class | 🇹🇷 Örnek Sayısı / 🇬🇧 Samples |
 |---|---|
 | *Iris Setosa* | 50 |
 | *Iris Versicolor* | 50 |
 | *Iris Virginica* | 50 |
 
-### Features
+### Özellikler / Features
 
 ```
 sepal length (cm)  →  Çanak yaprağı uzunluğu  /  Sepal length
@@ -225,13 +225,13 @@ petal length (cm)  →  Taç yaprağı uzunluğu    /  Petal length
 petal width  (cm)  →  Taç yaprağı genişliği   /  Petal width
 ```
 
-### Notebook Contents
+### Notebook İçeriği / Notebook Contents
 
-- Feature distribution histograms by species
-- Correlation heatmap
-- Best k selection via 5-fold cross-validation
-- Train / Test / CV accuracy comparison
-- Confusion matrix & classification report
+- 🇹🇷 Türe göre özellik dağılım histogramları / 🇬🇧 Feature distribution histograms by species
+- 🇹🇷 Korelasyon ısı haritası / 🇬🇧 Correlation heatmap
+- 🇹🇷 5-katlı çapraz doğrulama ile en iyi k seçimi / 🇬🇧 Best k selection via 5-fold cross-validation
+- 🇹🇷 Eğitim / Test / CV doğruluk karşılaştırması / 🇬🇧 Train / Test / CV accuracy comparison
+- 🇹🇷 Hata matrisi & sınıflandırma raporu / 🇬🇧 Confusion matrix & classification report
 
 </details>
 
@@ -246,15 +246,15 @@ petal width  (cm)  →  Taç yaprağı genişliği   /  Petal width
 
 🇬🇧 A dataset based on chemical analysis of wines from three different Italian producers. 13 chemical features are used to predict which producer the wine comes from.
 
-### Classes
+### Sınıflar / Classes
 
-| Class | Samples |
+| 🇹🇷 Sınıf / 🇬🇧 Class | 🇹🇷 Örnek Sayısı / 🇬🇧 Samples |
 |---|---|
-| Producer 1 | 59 |
-| Producer 2 | 71 |
-| Producer 3 | 48 |
+| 🇹🇷 Üretici 1 / 🇬🇧 Producer 1 | 59 |
+| 🇹🇷 Üretici 2 / 🇬🇧 Producer 2 | 71 |
+| 🇹🇷 Üretici 3 / 🇬🇧 Producer 3 | 48 |
 
-### Features (13)
+### Özellikler / Features (13)
 
 ```
 alcohol          →  Alkol oranı         /  Alcohol content
@@ -272,14 +272,14 @@ od280/od315      →  OD280/OD315         /  OD280/OD315 of wines
 proline          →  Prolin miktarı      /  Proline
 ```
 
-### Notebook Contents
+### Notebook İçeriği / Notebook Contents
 
-- Boxplots of key features by producer
-- 13×13 correlation matrix
-- Best k selection via 5-fold cross-validation
-- Train / Test / CV accuracy comparison
-- Confusion matrix & classification report
-- **PCA 2D visualization** (13 features → 2 dimensions)
+- 🇹🇷 Üreticiye göre temel özellik kutu grafikleri / 🇬🇧 Boxplots of key features by producer
+- 🇹🇷 13×13 korelasyon matrisi / 🇬🇧 13×13 correlation matrix
+- 🇹🇷 5-katlı çapraz doğrulama ile en iyi k seçimi / 🇬🇧 Best k selection via 5-fold cross-validation
+- 🇹🇷 Eğitim / Test / CV doğruluk karşılaştırması / 🇬🇧 Train / Test / CV accuracy comparison
+- 🇹🇷 Hata matrisi & sınıflandırma raporu / 🇬🇧 Confusion matrix & classification report
+- 🇹🇷 **PCA 2B görselleştirme** (13 özellik → 2 boyut) / 🇬🇧 **PCA 2D visualization** (13 features → 2 dimensions)
 
 </details>
 
@@ -294,28 +294,29 @@ proline          →  Prolin miktarı      /  Proline
 
 🇬🇧 Built into scikit-learn, this dataset consists of 8×8 pixel grayscale images of handwritten digits 0–9. It is a simplified version of a real-world image recognition problem.
 
-### Classes
+### Sınıflar / Classes
 
-10 classes — digits 0 through 9 (~180 samples each)
+🇹🇷 10 sınıf — 0'dan 9'a kadar rakamlar (her birinden ~180 örnek)
+🇬🇧 10 classes — digits 0 through 9 (~180 samples each)
 
-### Data Structure
+### Veri Yapısı / Data Structure
 
 ```
-Each image   →  8 × 8 pixels  =  64 features
-Pixel value  →  0 (white) ... 16 (black)
-Total samples →  1797 images
+🇹🇷 Her görüntü  /  🇬🇧 Each image    →  8 × 8 piksel / pixels  =  64 özellik / features
+🇹🇷 Piksel değeri / 🇬🇧 Pixel value   →  0 (beyaz/white) ... 16 (siyah/black)
+🇹🇷 Toplam örnek  / 🇬🇧 Total samples →  1797 görüntü / images
 ```
 
-### Notebook Contents
+### Notebook İçeriği / Notebook Contents
 
-- Sample images for each digit
-- Average pixel intensity maps per digit
-- Class distribution chart
-- Best k selection via 5-fold cross-validation
-- Train / Test / CV accuracy comparison
-- 10×10 Confusion matrix & classification report
-- **PCA 2D visualization** (64 features → 2 dimensions)
-- **Visualization of misclassified samples**
+- 🇹🇷 Her rakam için örnek görüntüler / 🇬🇧 Sample images for each digit
+- 🇹🇷 Rakam başına ortalama piksel yoğunluğu haritası / 🇬🇧 Average pixel intensity maps per digit
+- 🇹🇷 Sınıf dağılım grafiği / 🇬🇧 Class distribution chart
+- 🇹🇷 5-katlı çapraz doğrulama ile en iyi k seçimi / 🇬🇧 Best k selection via 5-fold cross-validation
+- 🇹🇷 Eğitim / Test / CV doğruluk karşılaştırması / 🇬🇧 Train / Test / CV accuracy comparison
+- 🇹🇷 10×10 hata matrisi & sınıflandırma raporu / 🇬🇧 10×10 Confusion matrix & classification report
+- 🇹🇷 **PCA 2B görselleştirme** (64 özellik → 2 boyut) / 🇬🇧 **PCA 2D visualization** (64 features → 2 dimensions)
+- 🇹🇷 **Yanlış sınıflandırılan örneklerin görselleştirilmesi** / 🇬🇧 **Visualization of misclassified samples**
 
 </details>
 
