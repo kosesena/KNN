@@ -139,6 +139,94 @@ Digits →  Many features,   image data,        real-world scenario
 
 ---
 
+## Bölüm 5 — Ders Notu İçeriği / Course Note Contents
+
+Bu repo, **Bölüm 5** ders notundaki tüm konuları kapsar.
+
+| # | Konu | Notebook Bölümü |
+|---|------|----------------|
+| 1 | KNN Algoritması Nedir? | Bölüm 1 — Giriş |
+| 2 | Öklid Uzaklık Formülü | Bölüm 1 — Giriş |
+| 3 | KNN Adım Adım (K=4, 2D) — Uygulama 1 | Teorik Uygulamalar |
+| 4 | Min-Max Normalizasyonu ile KNN (K=3, 3D) — Uygulama 2 | Teorik Uygulamalar |
+| 5 | Ağırlıklı Oylama (K=3) — Uygulama 3 | Teorik Uygulamalar |
+| 6 | Gerçek Veri: Göğüs Kanseri Teşhisi | Bölüm 2–9 |
+| 7 | Etiket Kodlama (M→1, B→0) | Bölüm 4 |
+| 8 | Normalizasyon (Min-Max) | Bölüm 6 |
+| 9 | Eğitim / Test Ayrımı (%70/%30) | Bölüm 7 |
+| 10 | KNN Modeli ve K Değeri Seçimi | Bölüm 8 |
+| 11 | Ağırlıklı Oylama (`weights='distance'`) | Bölüm 8b |
+| 12 | Manuel Doğruluk Hesabı | Bölüm 10a |
+| 13 | `accuracy_score` ile Doğruluk | Bölüm 10b |
+| 14 | Hata Matrisi (Confusion Matrix) | Bölüm 11 |
+
+### KNN Algoritması Adımları / Algorithm Steps
+
+```
+1. K parametresini belirle  →  Kaç komşuya bakılacak?
+2. Tüm mesafeleri hesapla   →  D(i,j) = √Σ(xᵢₖ - xⱼₖ)²
+3. Mesafeye göre sırala     →  En küçük K tanesini seç
+4. Sınıfları belirle        →  Seçilen K komşunun sınıflarına bak
+5. Çoğunluk oylaması        →  En çok tekrarlanan sınıf → tahmin
+```
+
+### Manuel Uygulamalar / Manual Examples
+
+<details>
+<summary><b>Uygulama 1 — Temel KNN (K=4, 2 Boyutlu)</b></summary>
+
+Yeni nokta **(8, 4)** için K=4 en yakın komşu belirlenir.
+
+| X1 | X2 | Y | Uzaklık |
+|----|----|----|---------|
+| 6 | 3 | İYİ | 2.24 ← |
+| 10 | 2 | KÖTÜ | 2.83 ← |
+| 9 | 7 | KÖTÜ | 3.16 ← |
+| 11 | 7 | KÖTÜ | 4.24 ← |
+
+En yakın 4 komşu: 1× İYİ, 3× KÖTÜ → **(8,4) = KÖTÜ**
+
+</details>
+
+<details>
+<summary><b>Uygulama 2 — Normalizasyon ile KNN (K=3, 3 Boyutlu)</b></summary>
+
+**(7, 8, 5)** noktası önce Min-Max ile normalize edilir: **(0.26, 0.43, 0.07)**
+
+En yakın 3 komşu: 1× HAYIR, 2× EVET → **(7,8,5) = EVET**
+
+</details>
+
+<details>
+<summary><b>Uygulama 3 — Ağırlıklı Oylama (K=3)</b></summary>
+
+**(0.10, 0.50)** noktası, standart oylamada ERKEK çıkarken ağırlıklı oylamada KADIN çıkar.
+
+**Formül:** $w_i = \frac{1}{d(i,j)^2}$
+
+| Komşu | Uzaklık | Sınıf | Ağırlık |
+|-------|---------|-------|---------|
+| (0.15, 0.55) | 0.07 | KADIN | **200.00** |
+| (0.20, 0.25) | 0.27 | ERKEK | 13.79 |
+| (0.08, 0.20) | 0.30 | ERKEK | 11.05 |
+
+KADIN: 200.00 > ERKEK: 24.84 → **(0.10, 0.50) = KADIN**
+
+</details>
+
+### Hata Matrisi / Confusion Matrix
+
+```
+                 Tahmin: 0 (B)    Tahmin: 1 (M)
+Gerçek: 0 (B) │      TN         │      FP       │
+Gerçek: 1 (M) │      FN ⚠️      │      TP       │
+```
+
+- **FN (False Negative):** Malign tümör "benign" tahmin edilmiş → En tehlikeli hata
+- **Precision** = TP / (TP+FP) · **Recall** = TP / (TP+FN) · **F1** = harmonik ortalama
+
+---
+
 ## KNN Nedir? / What is KNN?
 
 <div align="center">
