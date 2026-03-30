@@ -189,7 +189,7 @@ New point → Find k nearest neighbors → Majority vote → Assign class ✓
 
 <div align="center">
 
-| | Dataset | Notebook | Samples | Features | Classes |
+| | 🇹🇷 Veri Seti / 🇬🇧 Dataset | Notebook | 🇹🇷 Örnek / 🇬🇧 Samples | 🇹🇷 Özellik / 🇬🇧 Features | 🇹🇷 Sınıf / 🇬🇧 Classes |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | 🌸 | **Iris** | `KNN_Iris.ipynb` | 150 | 4 | 3 |
 | 🍷 | **Wine** | `KNN_Wine.ipynb` | 178 | 13 | 3 |
@@ -200,7 +200,7 @@ New point → Find k nearest neighbors → Majority vote → Assign class ✓
 ---
 
 <details>
-<summary><h2>🌸 Dataset 1 — Iris (Flower Species Classification)</h2></summary>
+<summary><h2>🌸 Veri Seti 1 / Dataset 1 — Iris (Çiçek Türü Sınıflandırması / Flower Species Classification)</h2></summary>
 
 <br/>
 
@@ -238,7 +238,7 @@ petal width  (cm)  →  Taç yaprağı genişliği   /  Petal width
 ---
 
 <details>
-<summary><h2>🍷 Dataset 2 — Wine (Producer Classification)</h2></summary>
+<summary><h2>🍷 Veri Seti 2 / Dataset 2 — Wine (Üretici Sınıflandırması / Producer Classification)</h2></summary>
 
 <br/>
 
@@ -286,7 +286,7 @@ proline          →  Prolin miktarı      /  Proline
 ---
 
 <details>
-<summary><h2>✍️ Dataset 3 — Digits (Handwritten Digit Recognition)</h2></summary>
+<summary><h2>✍️ Veri Seti 3 / Dataset 3 — Digits (El Yazısı Rakam Tanıma / Handwritten Digit Recognition)</h2></summary>
 
 <br/>
 
