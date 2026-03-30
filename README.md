@@ -141,27 +141,29 @@ Digits →  Many features,   image data,        real-world scenario
 
 ## Bölüm 5 — Ders Notu İçeriği / Course Note Contents
 
-Bu repo, **Bölüm 5** ders notundaki tüm konuları kapsar.
+🇹🇷 Bu repo, **Bölüm 5** ders notundaki tüm konuları kapsar.
+🇬🇧 This repository covers all topics from the **Chapter 5** course notes.
 
-| # | Konu | Notebook Bölümü |
-|---|------|----------------|
-| 1 | KNN Algoritması Nedir? | Bölüm 1 — Giriş |
-| 2 | Öklid Uzaklık Formülü | Bölüm 1 — Giriş |
-| 3 | KNN Adım Adım (K=4, 2D) — Uygulama 1 | Teorik Uygulamalar |
-| 4 | Min-Max Normalizasyonu ile KNN (K=3, 3D) — Uygulama 2 | Teorik Uygulamalar |
-| 5 | Ağırlıklı Oylama (K=3) — Uygulama 3 | Teorik Uygulamalar |
-| 6 | Gerçek Veri: Göğüs Kanseri Teşhisi | Bölüm 2–9 |
-| 7 | Etiket Kodlama (M→1, B→0) | Bölüm 4 |
-| 8 | Normalizasyon (Min-Max) | Bölüm 6 |
-| 9 | Eğitim / Test Ayrımı (%70/%30) | Bölüm 7 |
-| 10 | KNN Modeli ve K Değeri Seçimi | Bölüm 8 |
-| 11 | Ağırlıklı Oylama (`weights='distance'`) | Bölüm 8b |
-| 12 | Manuel Doğruluk Hesabı | Bölüm 10a |
-| 13 | `accuracy_score` ile Doğruluk | Bölüm 10b |
-| 14 | Hata Matrisi (Confusion Matrix) | Bölüm 11 |
+| # | 🇹🇷 Konu | 🇬🇧 Topic | Notebook |
+|---|---------|----------|----------|
+| 1 | KNN Algoritması Nedir? | What is the KNN Algorithm? | Section 1 — Intro |
+| 2 | Öklid Uzaklık Formülü | Euclidean Distance Formula | Section 1 — Intro |
+| 3 | KNN Adım Adım (K=4, 2D) — Uygulama 1 | Step-by-step KNN (K=4, 2D) — Example 1 | Manual Examples |
+| 4 | Min-Max Normalizasyonu ile KNN — Uygulama 2 | KNN with Min-Max Normalization — Example 2 | Manual Examples |
+| 5 | Ağırlıklı Oylama (K=3) — Uygulama 3 | Weighted Voting (K=3) — Example 3 | Manual Examples |
+| 6 | Gerçek Veri: Göğüs Kanseri Teşhisi | Real Dataset: Breast Cancer Diagnosis | Sections 2–9 |
+| 7 | Etiket Kodlama (M→1, B→0) | Label Encoding (M→1, B→0) | Section 4 |
+| 8 | Normalizasyon (Min-Max) | Normalization (Min-Max) | Section 6 |
+| 9 | Eğitim / Test Ayrımı (%70/%30) | Train / Test Split (70%/30%) | Section 7 |
+| 10 | KNN Modeli ve K Değeri Seçimi | KNN Model and K Selection | Section 8 |
+| 11 | Ağırlıklı Oylama (`weights='distance'`) | Weighted Voting (`weights='distance'`) | Section 8b |
+| 12 | Manuel Doğruluk Hesabı | Manual Accuracy Calculation | Section 10a |
+| 13 | `accuracy_score` ile Doğruluk | Accuracy via `accuracy_score` | Section 10b |
+| 14 | Hata Matrisi (Confusion Matrix) | Error Matrix (Confusion Matrix) | Section 11 |
 
 ### KNN Algoritması Adımları / Algorithm Steps
 
+🇹🇷
 ```
 1. K parametresini belirle  →  Kaç komşuya bakılacak?
 2. Tüm mesafeleri hesapla   →  D(i,j) = √Σ(xᵢₖ - xⱼₖ)²
@@ -170,60 +172,103 @@ Bu repo, **Bölüm 5** ders notundaki tüm konuları kapsar.
 5. Çoğunluk oylaması        →  En çok tekrarlanan sınıf → tahmin
 ```
 
+🇬🇧
+```
+1. Set K parameter          →  How many neighbors to consider?
+2. Compute all distances    →  D(i,j) = √Σ(xᵢₖ - xⱼₖ)²
+3. Sort by distance         →  Select the K smallest distances
+4. Identify classes         →  Look at the classes of selected K neighbors
+5. Majority vote            →  Most frequent class → prediction
+```
+
 ### Manuel Uygulamalar / Manual Examples
 
 <details>
-<summary><b>Uygulama 1 — Temel KNN (K=4, 2 Boyutlu)</b></summary>
+<summary><b>Uygulama 1 / Example 1 — Temel KNN / Basic KNN (K=4, 2D)</b></summary>
 
-Yeni nokta **(8, 4)** için K=4 en yakın komşu belirlenir.
+🇹🇷 Yeni nokta **(8, 4)** için K=4 en yakın komşu belirlenir.
+🇬🇧 Find the K=4 nearest neighbors for the new point **(8, 4)**.
 
-| X1 | X2 | Y | Uzaklık |
+| X1 | X2 | 🇹🇷 Sınıf / 🇬🇧 Class | 🇹🇷 Uzaklık / 🇬🇧 Distance |
 |----|----|----|---------|
-| 6 | 3 | İYİ | 2.24 ← |
-| 10 | 2 | KÖTÜ | 2.83 ← |
-| 9 | 7 | KÖTÜ | 3.16 ← |
-| 11 | 7 | KÖTÜ | 4.24 ← |
+| 6 | 3 | İYİ / GOOD | 2.24 ← |
+| 10 | 2 | KÖTÜ / BAD | 2.83 ← |
+| 9 | 7 | KÖTÜ / BAD | 3.16 ← |
+| 11 | 7 | KÖTÜ / BAD | 4.24 ← |
 
-En yakın 4 komşu: 1× İYİ, 3× KÖTÜ → **(8,4) = KÖTÜ**
-
-</details>
-
-<details>
-<summary><b>Uygulama 2 — Normalizasyon ile KNN (K=3, 3 Boyutlu)</b></summary>
-
-**(7, 8, 5)** noktası önce Min-Max ile normalize edilir: **(0.26, 0.43, 0.07)**
-
-En yakın 3 komşu: 1× HAYIR, 2× EVET → **(7,8,5) = EVET**
+🇹🇷 En yakın 4 komşu: 1× İYİ, 3× KÖTÜ → **(8,4) = KÖTÜ**
+🇬🇧 4 nearest neighbors: 1× GOOD, 3× BAD → **(8,4) = BAD**
 
 </details>
 
 <details>
-<summary><b>Uygulama 3 — Ağırlıklı Oylama (K=3)</b></summary>
+<summary><b>Uygulama 2 / Example 2 — Normalizasyon ile KNN / KNN with Normalization (K=3, 3D)</b></summary>
 
-**(0.10, 0.50)** noktası, standart oylamada ERKEK çıkarken ağırlıklı oylamada KADIN çıkar.
+🇹🇷 **(7, 8, 5)** noktası önce Min-Max ile normalize edilir: **(0.26, 0.43, 0.07)**
+🇬🇧 Point **(7, 8, 5)** is first normalized via Min-Max: **(0.26, 0.43, 0.07)**
 
-**Formül:** $w_i = \frac{1}{d(i,j)^2}$
+🇹🇷 En yakın 3 komşu: 1× HAYIR, 2× EVET → **(7,8,5) = EVET**
+🇬🇧 3 nearest neighbors: 1× NO, 2× YES → **(7,8,5) = YES**
 
-| Komşu | Uzaklık | Sınıf | Ağırlık |
+🇹🇷 **Neden normalizasyon?** KNN mesafeye dayanır. Farklı ölçeklerdeki özellikler büyük ölçeklinin baskın gelmesine neden olur.
+🇬🇧 **Why normalize?** KNN relies on distance. Features at different scales cause larger-scale ones to dominate.
+
+</details>
+
+<details>
+<summary><b>Uygulama 3 / Example 3 — Ağırlıklı Oylama / Weighted Voting (K=3)</b></summary>
+
+🇹🇷 **(0.10, 0.50)** noktası, standart oylamada ERKEK çıkarken ağırlıklı oylamada KADIN çıkar.
+🇬🇧 For point **(0.10, 0.50)**, standard voting yields MALE but weighted voting yields FEMALE.
+
+🇹🇷 **Ağırlık formülü** / 🇬🇧 **Weight formula:** $w_i = \frac{1}{d(i,j)^2}$
+
+🇹🇷 Uzak komşular daha az, yakın komşular daha fazla etki eder.
+🇬🇧 Distant neighbors have less influence; closer neighbors have more.
+
+| 🇹🇷 Komşu / 🇬🇧 Neighbor | 🇹🇷 Uzaklık / 🇬🇧 Distance | 🇹🇷 Sınıf / 🇬🇧 Class | 🇹🇷 Ağırlık / 🇬🇧 Weight |
 |-------|---------|-------|---------|
-| (0.15, 0.55) | 0.07 | KADIN | **200.00** |
-| (0.20, 0.25) | 0.27 | ERKEK | 13.79 |
-| (0.08, 0.20) | 0.30 | ERKEK | 11.05 |
+| (0.15, 0.55) | 0.07 | KADIN / FEMALE | **200.00** |
+| (0.20, 0.25) | 0.27 | ERKEK / MALE | 13.79 |
+| (0.08, 0.20) | 0.30 | ERKEK / MALE | 11.05 |
 
-KADIN: 200.00 > ERKEK: 24.84 → **(0.10, 0.50) = KADIN**
+🇹🇷 KADIN: 200.00 > ERKEK: 24.84 → **(0.10, 0.50) = KADIN**
+🇬🇧 FEMALE: 200.00 > MALE: 24.84 → **(0.10, 0.50) = FEMALE**
 
 </details>
 
 ### Hata Matrisi / Confusion Matrix
 
+🇹🇷
 ```
                  Tahmin: 0 (B)    Tahmin: 1 (M)
 Gerçek: 0 (B) │      TN         │      FP       │
 Gerçek: 1 (M) │      FN ⚠️      │      TP       │
 ```
 
-- **FN (False Negative):** Malign tümör "benign" tahmin edilmiş → En tehlikeli hata
-- **Precision** = TP / (TP+FP) · **Recall** = TP / (TP+FN) · **F1** = harmonik ortalama
+🇬🇧
+```
+                  Predicted: 0 (B)   Predicted: 1 (M)
+Actual: 0 (B)  │       TN          │       FP        │
+Actual: 1 (M)  │       FN ⚠️       │       TP        │
+```
+
+| 🇹🇷 Terim | 🇬🇧 Term | 🇹🇷 Açıklama | 🇬🇧 Description |
+|----------|----------|------------|----------------|
+| **TN** (Doğru Negatif) | True Negative | Benign, benign tahmin edildi | Benign correctly predicted as benign |
+| **TP** (Doğru Pozitif) | True Positive | Malign, malign tahmin edildi | Malignant correctly predicted as malignant |
+| **FP** (Yanlış Pozitif) | False Positive | Benign ama malign tahmin edildi | Benign incorrectly predicted as malignant |
+| **FN** (Yanlış Negatif) ⚠️ | False Negative ⚠️ | Malign ama benign tahmin edildi | Malignant incorrectly predicted as benign |
+
+🇹🇷 **FN en tehlikeli hata:** Hasta biri sağlıklı zannedilerek tedavisiz bırakılır.
+🇬🇧 **FN is the most dangerous error:** A cancer patient is left untreated, believing they are healthy.
+
+| Metrik / Metric | Formül / Formula | 🇹🇷 Ne zaman önemli? | 🇬🇧 When does it matter? |
+|----------------|-----------------|---------------------|--------------------------|
+| **Accuracy** | (TP+TN) / Total | Dengeli veri setlerinde | Balanced datasets |
+| **Precision** | TP / (TP+FP) | FP maliyetliyse | When FP is costly |
+| **Recall** | TP / (TP+FN) | FN maliyetliyse (tıp) | When FN is costly (medicine) |
+| **F1 Score** | 2×(P×R)/(P+R) | İkisi de önemliyse | When both matter |
 
 ---
 
